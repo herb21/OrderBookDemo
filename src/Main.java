@@ -7,13 +7,13 @@ public class Main {
         orderbook.addOrder(order1);
         orderbook.addOrder(order2);
 
-        System.out.println("Orders at price 10.0, Buy side: " + orderbook.getOrdersAtPriceLevel(10.0, "Buy"));
+        System.out.println("Orders at price 10.0, Buy side: " + orderbook.getOrdersAtPriceLevel(10.0, Side.BUY.toString()));
 
         orderbook.modifyOrder(1, 200);
         System.out.println("Modified order: " + order1.getQuantity());
 
         orderbook.deleteOrder(2);
-        System.out.println("Orders at price 9.5, Sell side: " + orderbook.getOrdersAtPriceLevel(9.5, "Sell"));
+        System.out.println("Orders at price 9.5, Sell side: " + orderbook.getOrdersAtPriceLevel(9.5, Side.SELL.toString()));
 
 
         LimitOrderBook lob = new LimitOrderBook();
