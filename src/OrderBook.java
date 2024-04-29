@@ -31,7 +31,7 @@ class Orderbook {
                 for (Order order : orders) {
                     if (order.getId() == orderId) {
                         order.setQuantity(newQuantity);
-                        // To maintain FIFO, you may need to reorder the list
+                        // You can pass all parameter to be modified but for simplicity i just chose one
                         return;
                     }
                 }
